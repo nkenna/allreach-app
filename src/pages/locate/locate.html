@@ -1,0 +1,40 @@
+<!--
+  Generated template for the LocatePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons start>
+          <button ion-button menuToggle>
+              <ion-icon name="menu"></ion-icon>
+            </button>
+        
+      </ion-buttons>
+      <ion-title>All Reach - Locate</ion-title>
+      <ion-buttons end>
+                 <button ion-button icon-only color="dark" (click)="signin()">
+                  <ion-icon color="danger" *ngIf="!auth" name="power"></ion-icon>        
+              </button>
+        <button ion-button icon-only color="royal">
+          <ion-icon color="secondary" name="heart"></ion-icon>
+          <ion-badge color="secondary">{{num_donations}}</ion-badge>
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+
+<ion-content padding>
+
+    <ion-searchbar (ionInput)="getHomes($event)"></ion-searchbar>
+
+    <ion-list>
+        <button ion-item *ngFor="let home of homes" (click)="homeCLicked(home)">
+          {{home.title}}
+          
+        </button>
+      </ion-list>
+
+</ion-content>

@@ -1,5 +1,7 @@
 {
   "name": "allreach",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }

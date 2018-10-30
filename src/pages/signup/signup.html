@@ -1,0 +1,106 @@
+<!--
+  Generated template for the SignupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons start>
+          <button ion-button menuToggle>
+              <ion-icon name="menu"></ion-icon>
+            </button>
+        
+      </ion-buttons>
+      <ion-title>All Reach - Signup</ion-title>
+      <ion-buttons end>
+          
+              <button ion-button icon-only color="dark" (click)="signin()">
+               <ion-icon color="danger" *ngIf="!auth" name="power"></ion-icon>        
+           </button>
+        <button ion-button icon-only color="royal">
+          <ion-icon color="secondary" name="heart"></ion-icon>
+          <ion-badge color="secondary">{{num_donations}}</ion-badge>
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+
+<ion-content padding>
+
+    <h4 text-center margin-top>Insert your credentials</h4>
+
+    <ion-item>
+        <ion-label stacked>First Name</ion-label>
+        <ion-input [(ngModel)]="firstname"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label stacked>last Name</ion-label>
+          <ion-input [(ngModel)]="middlename"></ion-input>
+        </ion-item>
+
+      <ion-item>
+          <ion-label stacked>last Name</ion-label>
+          <ion-input [(ngModel)]="lastname"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Address</ion-label>
+            <ion-input [(ngModel)]="address"></ion-input>
+          </ion-item>
+
+          <ion-item>
+              <ion-label stacked>Location</ion-label>
+              <ion-input [(ngModel)]="location"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label stacked>State</ion-label>
+                <ion-input [(ngModel)]="state"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                  <ion-label stacked>Country</ion-label>
+                  <ion-input [(ngModel)]="country"></ion-input>
+                </ion-item>
+                
+
+                <ion-item>
+                    <ion-label stacked>Phone/Mobile</ion-label>
+                    <ion-input [(ngModel)]="phone"></ion-input>
+                  </ion-item>
+       
+   
+
+    <ion-item>
+      <ion-label stacked>Email</ion-label>
+      <ion-input [(ngModel)]="email"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label stacked>Password</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label stacked>Coperate firm/Individual/NGO</ion-label>        
+        <ion-select [(ngModel)]="nature">          
+          <ion-option value="coperate">Coperate firm</ion-option>
+          <ion-option value="ngo">NGO</ion-option>
+          <ion-option value="individual">Individual</ion-option>      
+    </ion-select>
+    </ion-item>
+  
+    <div text-center margin-top>
+      <button ion-button margin-right (click)="signUp()">
+        SIGN UP
+      </button>
+  
+      <button ion-button color="secondary" (click)="signIn()">
+        SIGN IN
+      </button>
+    </div>
+
+</ion-content>
